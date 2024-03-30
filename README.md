@@ -31,17 +31,17 @@ docker compose up -d
 _Fifth_, then open browser and go to 0.0.0.0:8080. Input username and password with airflow.
 
 ### Note
-+ Airflow task lifecycle as follows.
++ Airflow task lifecycle as follows. \
 ![airflow task lifecycle](assets/task-lifecycle.png)
 
-+ **schedule_interval** is defines how often a DAG should be run from start_date + schedule_time. For detail, let see picture below.
++ **schedule_interval** is defines how often a DAG should be run from start_date + schedule_time. For detail, let see picture below. \
 ![schedule interval](assets/schedule-interval.png)
 
 + **Executor** is defines how to run tasks. 
     + Sequential executor is not able to run multiple tasks at the same time. 
     + Local executor is able to execute multiple tasks at the same time on a single machine. Local executor does not scale very well as it depends on the machine. 
     + Celery executor is able to execute multiple tasks using different machine. \
-_For example_ as picture below. If we trigger DAG, scheduler send the T1 to the broker, then WORKER1 pull out the tasks from the broker in order to execute it. And once its done, the state of the task is stored into the result backend.
+_For example_ as picture below. If we trigger DAG, scheduler send the T1 to the broker, then WORKER1 pull out the tasks from the broker in order to execute it. And once its done, the state of the task is stored into the result backend. \
 ![celery](assets/celery.png) \
 We need to install celery queue which may be Redis or RabbitMQ.
 
