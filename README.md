@@ -9,7 +9,7 @@ This repository is note from watching video: [Learn to author, schedule and moni
 > Airflow is an orchestrator, not a processing framework. Process your gigabytes of data outside of Airflow (i.e. you have a Spark cluster, you use an operator to execute a Spark job, and the data is processed in Spark).
 
 ### Instalation
-Referece: [airflow official doccumentation](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
+Referece: [airflow official documentation](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
 
 _First_, download docker compose.
 ```
